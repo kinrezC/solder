@@ -11,30 +11,18 @@ use std::path::PathBuf;
 #[derive(Serialize, Deserialize, Debug)]
 struct Contract {
     contractName: String,
-    abi: ABI,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-struct ABI {
     abi: Vec<AbiType>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct AbiType {
     r#type: String,
-    name: String,
+    name: Option<String>,
     inputs: Vec<InputType>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct InputType {
-    internalType: String,
-    name: String,
-    r#type: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-struct OutputType {
     internalType: String,
     name: String,
     r#type: String,
