@@ -17,5 +17,6 @@ fn main() {
     let path = args.path;
 
     let files: Vec<PathBuf> = solder::get_valid_files_in_path(&path);
-    solder::read_contract_files(&files);
+    let contract_interfaces = solder::read_contract_files(&files);
+    println!("{:?}", contract_interfaces);
 }

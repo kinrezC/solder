@@ -9,7 +9,7 @@ use std::fs::read_to_string;
 use std::path::PathBuf;
 
 #[derive(Serialize, Deserialize, Debug)]
-struct Contract {
+pub struct Contract {
     contractName: String,
     abi: Vec<AbiType>,
 }
@@ -28,15 +28,17 @@ struct InputType {
     r#type: String,
 }
 
-pub fn read_contract_files(file_paths: &Vec<PathBuf>) {
+pub fn read_contract_files(file_paths: &Vec<PathBuf>) -> Vec<Contract> {
+    let mut contract_interfaces: Vec<Contract> = Vec::new();
     for file in file_paths {
         let content = read_to_string(&file).unwrap();
         let u: Contract = match serde_json::from_str(&content) {
             Err(why) => panic!("Error trying to deserialize: {}", why),
             Ok(deserialized) => deserialized,
         };
-        print!("{:?}", u);
+        contract_interfaces.push(u);
     }
+    contract_interfaces
 }
 
 pub fn get_valid_files_in_path(path: &PathBuf) -> Vec<PathBuf> {
