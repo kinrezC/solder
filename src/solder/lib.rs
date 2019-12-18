@@ -1,56 +1,58 @@
-extern crate structopt;
 extern crate regex;
-extern crate serde_json;
 extern crate serde;
+extern crate serde_json;
+extern crate structopt;
 
-use std::path::{PathBuf};
-use std::fs::read_to_string;
 use regex::Regex;
-use serde_derive::{Serialize, Deserialize};
-
+use serde_derive::{Deserialize, Serialize};
+use std::fs::read_to_string;
+use std::path::PathBuf;
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Contract {
-    name: String,
-    abi: ABI
+    contractName: String,
+    abi: ABI,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct ABI {
-    abi_contents: Vec<AbiType>,
+    abi: Vec<AbiType>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct AbiType {
-    object_type: String,
+    r#type: String,
     anonymous: bool,
     name: String,
     constant: bool,
-    state_mutability: String,
+    r#stateMutability: String,
     payable: bool,
     inputs: Vec<InputType>,
-    outputs: Vec<OutputType>
+    outputs: Vec<OutputType>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct InputType {
-    internal_type: String,
+    r#internalType: String,
     name: String,
-    input_type: String,
-    indexed: bool
+    r#type: String,
+    indexed: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct OutputType {
-    internal_type: String,
+    r#internalType: String,
     name: String,
-    output_type: String
+    r#type: String,
 }
 
 pub fn read_contract_files(file_paths: &Vec<PathBuf>) {
     for file in file_paths {
         let content = read_to_string(&file).unwrap();
-        let u: Contract = serde_json::from_str(&content).unwrap();
+        let u: Contract = match serde_json::from_str(&content) {
+            Err(why) => panic!("Error trying to deserialize: {}", why),
+            Ok(deserialized) => deserialized,
+        };
         print!("{:?}", u);
     }
 }
@@ -68,5 +70,4 @@ pub fn get_valid_files_in_path(path: &PathBuf) -> Vec<PathBuf> {
         }
     }
     files
-
 }

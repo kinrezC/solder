@@ -1,9 +1,9 @@
-extern crate structopt;
 extern crate solder;
+extern crate structopt;
 
-use std::path::{PathBuf, Path};
-use structopt::StructOpt;
 use std::fs::read_to_string;
+use std::path::PathBuf;
+use structopt::StructOpt;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -17,9 +17,5 @@ fn main() {
     let path = args.path;
 
     let files: Vec<PathBuf> = solder::get_valid_files_in_path(&path);
-    
     solder::read_contract_files(&files);
 }
-
-
-
