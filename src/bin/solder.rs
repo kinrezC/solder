@@ -18,7 +18,7 @@ fn main() {
 
     let files: Vec<PathBuf> = solder::get_valid_files_in_path(&path);
     
-    solder::read_file(&files);
+    solder::read_contract_files(&files);
 }
 
 
