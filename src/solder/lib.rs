@@ -22,26 +22,20 @@ struct ABI {
 #[derive(Serialize, Deserialize, Debug)]
 struct AbiType {
     r#type: String,
-    anonymous: bool,
     name: String,
-    constant: bool,
-    r#stateMutability: String,
-    payable: bool,
     inputs: Vec<InputType>,
-    outputs: Vec<OutputType>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct InputType {
-    r#internalType: String,
+    internalType: String,
     name: String,
     r#type: String,
-    indexed: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 struct OutputType {
-    r#internalType: String,
+    internalType: String,
     name: String,
     r#type: String,
 }
