@@ -34,6 +34,12 @@ struct InputType {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+struct SelectorMatchContainer {
+    name: String,
+    selector_match: Vec<SelectorMatch>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 struct SelectorMatch {
     signature: String,
     selector: String,
@@ -48,11 +54,15 @@ pub fn process_functions_and_events(path: PathBuf) {
     let abi_types = deserialize_json_interface(file_paths);
     let (function_types, event_types) = separate_functions_and_events(abi_types);
 
-    let signatures_and_selectors: Vec<SelectorMatch> = Vec::new();
-    for function in function_types {
-        let mut signature = (function.name + "(").to_string();
-        if function.inputs.len() > 0 {
-            for input in function.inputs {
+    let mut signatures_and_selectors: Vec<SelectorMatch> = Vec::new();
+}
+
+fn parse_signatures_and_selectors(vec: Vec<AbiType>, type_name: String) -> SelectorMatchContainer {
+    let mut signatures_and_selectors: Vec<SelectorMatch> = Vec::new();
+    for item in vec {
+        let mut signature = (item.name + "(").to_string();
+        if item.inputs.len() > 0 {
+            for input in item.inputs {
                 signature = (signature + &input.r#type.clone() + ", ").to_string();
             }
             signature.truncate(signature.len() - 2);
@@ -63,7 +73,17 @@ pub fn process_functions_and_events(path: PathBuf) {
         let bytes = signature.as_bytes();
         let hash: H256 = keccak(bytes);
         let selector = "0x".to_string() + &hex::encode(&hash[0..4]);
-        signatures_and_selectors.push(SelectorMatch { signature: signature, selector: selector });
+        let selector_match = SelectorMatch {
+            signature: signature,
+            selector: selector,
+        };
+
+        signatures_and_selectors.push(selector_match);
+    }
+
+    SelectorMatchContainer {
+        name: type_name,
+        selector_match: signatures_and_selectors,
     }
 }
 
