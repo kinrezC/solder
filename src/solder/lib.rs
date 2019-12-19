@@ -3,12 +3,14 @@ extern crate hex;
 extern crate keccak_hash;
 extern crate regex;
 extern crate serde;
+extern crate serde_any;
 extern crate structopt;
 
 use ethereum_types::H256;
 use keccak_hash::keccak;
 use regex::Regex;
 use serde_derive::{Deserialize, Serialize};
+use serde_json;
 use std::fs::read_to_string;
 use std::path::PathBuf;
 
@@ -53,8 +55,16 @@ pub fn process_functions_and_events(path: PathBuf) {
     let file_paths = get_valid_files_in_path(path);
     let abi_types = deserialize_json_interface(file_paths);
     let (function_types, event_types) = separate_functions_and_events(abi_types);
+    let functions_name = "functions".to_string();
+    let events_name = "events".to_string();
+    let functions_match = parse_signatures_and_selectors(function_types, functions_name);
+    let events_match = parse_signatures_and_selectors(event_types, events_name);
 
-    let mut signatures_and_selectors: Vec<SelectorMatch> = Vec::new();
+    let functions_json = serde_json::to_string(&functions_match).unwrap();
+    let events_json = serde_json::to_string(&events_match).unwrap();
+
+    serde_any::to_file("functions.json", &functions_json).unwrap();
+    serde_any::to_file("events.json", &events_json).unwrap();
 }
 
 fn parse_signatures_and_selectors(vec: Vec<AbiType>, type_name: String) -> SelectorMatchContainer {
