@@ -1,0 +1,2147 @@
+{
+  "contract_matches": [
+    {
+      "name": "IERC20",
+      "functions": [
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "FixedPoint",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "EncryptedSender",
+      "functions": [
+        {
+          "signature": "addAuthorizedSender(address)",
+          "selector": "0xfa7229ee"
+        },
+        {
+          "signature": "removeAuthorizedSender(address)",
+          "selector": "0xcbd57967"
+        },
+        {
+          "signature": "getMessage(address, bytes32)",
+          "selector": "0x5a615c91"
+        },
+        {
+          "signature": "getPublicKey(address, bytes32)",
+          "selector": "0xef397177"
+        },
+        {
+          "signature": "sendMessage(address, bytes32, bytes)",
+          "selector": "0xb057e5f3"
+        },
+        {
+          "signature": "removeMessage(address, bytes32)",
+          "selector": "0x55f7df1e"
+        },
+        {
+          "signature": "setPublicKey(bytes, bytes32)",
+          "selector": "0xbec3b3cf"
+        },
+        {
+          "signature": "isAuthorizedSender(address, address)",
+          "selector": "0x0ba03f68"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "SignedSafeMath",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "LeveragedShort1xTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "echidna_signage()",
+          "selector": "0xc3cf41bc"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "storeReturn(int256, int256)",
+          "selector": "0x0b564796"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "ContractCreator",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "ExpandedIERC20",
+      "functions": [
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "burn(uint256)",
+          "selector": "0x42966c68"
+        },
+        {
+          "signature": "mint(address, uint256)",
+          "selector": "0x36e59c31"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "TestableTest",
+      "functions": [
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        },
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "getTestableTimeAndBlockTime()",
+          "selector": "0xdc6ff7bd"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Finder",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "interfacesImplemented(bytes32)",
+          "selector": "0xcc48f4db"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "changeImplementationAddress(bytes32, address)",
+          "selector": "0x8455d389"
+        },
+        {
+          "signature": "getImplementationAddress(bytes32)",
+          "selector": "0xaafd5e40"
+        }
+      ],
+      "events": [
+        {
+          "signature": "InterfaceImplementationChanged(bytes32, address)",
+          "selector": "0xdb8ae99e"
+        }
+      ]
+    },
+    {
+      "name": "Shared",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "Registry",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "registerDerivative(address[], address)",
+          "selector": "0x8ab817d3"
+        },
+        {
+          "signature": "isDerivativeRegistered(address)",
+          "selector": "0x8a3ca36b"
+        },
+        {
+          "signature": "getRegisteredDerivatives(address)",
+          "selector": "0x35a027a0"
+        },
+        {
+          "signature": "getAllRegisteredDerivatives()",
+          "selector": "0x647fcf18"
+        }
+      ],
+      "events": [
+        {
+          "signature": "NewDerivativeRegistered(address, address[])",
+          "selector": "0xd4e93529"
+        }
+      ]
+    },
+    {
+      "name": "TestnetERC20",
+      "functions": [
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "decimals()",
+          "selector": "0x313ce567"
+        },
+        {
+          "signature": "decreaseAllowance(address, uint256)",
+          "selector": "0x26444acc"
+        },
+        {
+          "signature": "increaseAllowance(address, uint256)",
+          "selector": "0x0553e395"
+        },
+        {
+          "signature": "name()",
+          "selector": "0x06fdde03"
+        },
+        {
+          "signature": "symbol()",
+          "selector": "0x95d89b41"
+        },
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "allocateTo(address, uint256)",
+          "selector": "0x059ac23b"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "OracleInterface",
+      "functions": [
+        {
+          "signature": "requestPrice(bytes32, uint256)",
+          "selector": "0xceb59e9d"
+        },
+        {
+          "signature": "isIdentifierSupported(bytes32)",
+          "selector": "0x90978d1b"
+        },
+        {
+          "signature": "hasPrice(bytes32, uint256)",
+          "selector": "0xb3afb480"
+        },
+        {
+          "signature": "getPrice(bytes32, uint256)",
+          "selector": "0x182a7daf"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Store",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "payOracleFees()",
+          "selector": "0xcd3a9b24"
+        },
+        {
+          "signature": "payOracleFeesErc20(address)",
+          "selector": "0x4933a887"
+        },
+        {
+          "signature": "computeRegularFee(uint256, uint256, tuple)",
+          "selector": "0x553cce82"
+        },
+        {
+          "signature": "computeFinalFee(address)",
+          "selector": "0x5b97aadd"
+        },
+        {
+          "signature": "setFixedOracleFeePerSecond(tuple)",
+          "selector": "0xd887bae0"
+        },
+        {
+          "signature": "setWeeklyDelayFee(tuple)",
+          "selector": "0xc08fe098"
+        },
+        {
+          "signature": "setFinalFee(address, tuple)",
+          "selector": "0x38b0c008"
+        }
+      ],
+      "events": [
+        {
+          "signature": "NewFixedOracleFeePerSecond(tuple)",
+          "selector": "0x1cd2d135"
+        }
+      ]
+    },
+    {
+      "name": "Counters",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "MockOracle",
+      "functions": [
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        },
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "requestPrice(bytes32, uint256)",
+          "selector": "0xceb59e9d"
+        },
+        {
+          "signature": "pushPrice(bytes32, uint256, int256)",
+          "selector": "0xaf31bac6"
+        },
+        {
+          "signature": "addSupportedIdentifier(bytes32)",
+          "selector": "0x10a7e201"
+        },
+        {
+          "signature": "hasPrice(bytes32, uint256)",
+          "selector": "0xb3afb480"
+        },
+        {
+          "signature": "getPrice(bytes32, uint256)",
+          "selector": "0x182a7daf"
+        },
+        {
+          "signature": "getPendingQueries()",
+          "selector": "0xb555d608"
+        },
+        {
+          "signature": "isIdentifierSupported(bytes32)",
+          "selector": "0x90978d1b"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Withdrawable",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "TokenizedDerivative",
+      "functions": [
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "decimals()",
+          "selector": "0x313ce567"
+        },
+        {
+          "signature": "decreaseAllowance(address, uint256)",
+          "selector": "0x26444acc"
+        },
+        {
+          "signature": "derivativeStorage()",
+          "selector": "0x3e1700a7"
+        },
+        {
+          "signature": "increaseAllowance(address, uint256)",
+          "selector": "0x0553e395"
+        },
+        {
+          "signature": "name()",
+          "selector": "0x06fdde03"
+        },
+        {
+          "signature": "symbol()",
+          "selector": "0x95d89b41"
+        },
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "createTokens(uint256, uint256)",
+          "selector": "0x76e8ef39"
+        },
+        {
+          "signature": "depositAndCreateTokens(uint256, uint256)",
+          "selector": "0x995ef151"
+        },
+        {
+          "signature": "redeemTokens(uint256)",
+          "selector": "0xa6e158f8"
+        },
+        {
+          "signature": "dispute(uint256)",
+          "selector": "0x86d6282c"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "remargin()",
+          "selector": "0xbda02e77"
+        },
+        {
+          "signature": "acceptPriceAndSettle()",
+          "selector": "0x156c87fb"
+        },
+        {
+          "signature": "setApDelegate(address)",
+          "selector": "0x1c93cd75"
+        },
+        {
+          "signature": "emergencyShutdown()",
+          "selector": "0x3403c2fc"
+        },
+        {
+          "signature": "settle()",
+          "selector": "0x11da60b4"
+        },
+        {
+          "signature": "deposit(uint256)",
+          "selector": "0xb6b55f25"
+        },
+        {
+          "signature": "withdrawUnexpectedErc20(address, uint256)",
+          "selector": "0x9e45c96a"
+        },
+        {
+          "signature": "burn(uint256)",
+          "selector": "0x42966c68"
+        },
+        {
+          "signature": "mint(address, uint256)",
+          "selector": "0x36e59c31"
+        },
+        {
+          "signature": "calcNAV()",
+          "selector": "0x3327570b"
+        },
+        {
+          "signature": "calcTokenValue()",
+          "selector": "0x211339f8"
+        },
+        {
+          "signature": "calcShortMarginBalance()",
+          "selector": "0xe39dd93a"
+        },
+        {
+          "signature": "calcExcessMargin()",
+          "selector": "0xc7af29a9"
+        },
+        {
+          "signature": "getCurrentRequiredMargin()",
+          "selector": "0x6074785a"
+        },
+        {
+          "signature": "canBeSettled()",
+          "selector": "0xf3f75c06"
+        },
+        {
+          "signature": "getUpdatedUnderlyingPrice()",
+          "selector": "0xe14e42da"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Default(string, uint256, int256)",
+          "selector": "0x20ecdc9a"
+        },
+        {
+          "signature": "Deposited(string, uint256)",
+          "selector": "0xf5e6a48b"
+        },
+        {
+          "signature": "Disputed(string, uint256, int256)",
+          "selector": "0x26b90afd"
+        },
+        {
+          "signature": "EmergencyShutdownTransition(string, uint256)",
+          "selector": "0x3044ba0f"
+        },
+        {
+          "signature": "Expired(string, uint256)",
+          "selector": "0x654ded00"
+        },
+        {
+          "signature": "NavUpdated(string, int256, int256)",
+          "selector": "0xabd9dbe3"
+        },
+        {
+          "signature": "Settled(string, uint256, int256)",
+          "selector": "0x360fac43"
+        },
+        {
+          "signature": "TokensCreated(string, uint256)",
+          "selector": "0xfd047958"
+        },
+        {
+          "signature": "TokensRedeemed(string, uint256)",
+          "selector": "0x42e7d4f4"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        },
+        {
+          "signature": "Withdrawal(string, uint256)",
+          "selector": "0x5b830aae"
+        }
+      ]
+    },
+    {
+      "name": "PriceFeedInterface",
+      "functions": [
+        {
+          "signature": "isIdentifierSupported(bytes32)",
+          "selector": "0x90978d1b"
+        },
+        {
+          "signature": "latestPrice(bytes32)",
+          "selector": "0x4eec7c2b"
+        }
+      ],
+      "events": [
+        {
+          "signature": "PriceUpdated(bytes32, uint256, int256)",
+          "selector": "0xabac28b3"
+        }
+      ]
+    },
+    {
+      "name": "ManualPriceFeed",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "pushLatestPrice(bytes32, uint256, int256)",
+          "selector": "0x3430ccfb"
+        },
+        {
+          "signature": "isIdentifierSupported(bytes32)",
+          "selector": "0x90978d1b"
+        },
+        {
+          "signature": "latestPrice(bytes32)",
+          "selector": "0x4eec7c2b"
+        }
+      ],
+      "events": [
+        {
+          "signature": "PriceUpdated(bytes32, uint256, int256)",
+          "selector": "0xabac28b3"
+        }
+      ]
+    },
+    {
+      "name": "StoreInterface",
+      "functions": [
+        {
+          "signature": "payOracleFees()",
+          "selector": "0xcd3a9b24"
+        },
+        {
+          "signature": "payOracleFeesErc20(address)",
+          "selector": "0x4933a887"
+        },
+        {
+          "signature": "computeRegularFee(uint256, uint256, tuple)",
+          "selector": "0x553cce82"
+        },
+        {
+          "signature": "computeFinalFee(address)",
+          "selector": "0x5b97aadd"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Migrations",
+      "functions": [
+        {
+          "signature": "last_completed_migration()",
+          "selector": "0x445df0ac"
+        },
+        {
+          "signature": "owner()",
+          "selector": "0x8da5cb5b"
+        },
+        {
+          "signature": "setCompleted(uint256)",
+          "selector": "0xfdacd576"
+        },
+        {
+          "signature": "upgrade(address)",
+          "selector": "0x0900f010"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "TokenMigrator",
+      "functions": [
+        {
+          "signature": "hasMigrated(address)",
+          "selector": "0xd7625c88"
+        },
+        {
+          "signature": "newToken()",
+          "selector": "0xc42bd05a"
+        },
+        {
+          "signature": "oldToken()",
+          "selector": "0xb31c710a"
+        },
+        {
+          "signature": "rate()",
+          "selector": "0x2c4e722e"
+        },
+        {
+          "signature": "snapshotId()",
+          "selector": "0x2ddc79b7"
+        },
+        {
+          "signature": "migrateTokens(address)",
+          "selector": "0xc1684711"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "DesignatedVoting",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "commitVote(bytes32, uint256, bytes32)",
+          "selector": "0xc21f3d25"
+        },
+        {
+          "signature": "revealVote(bytes32, uint256, int256, int256)",
+          "selector": "0x9bcd928a"
+        },
+        {
+          "signature": "retrieveRewards(uint256, tuple[])",
+          "selector": "0xec3d4f3d"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "ResultComputationTest",
+      "functions": [
+        {
+          "signature": "data()",
+          "selector": "0x73d4a13a"
+        },
+        {
+          "signature": "wrapAddVote(int256, uint256)",
+          "selector": "0x43a8c9c7"
+        },
+        {
+          "signature": "wrapGetResolvedPrice(uint256)",
+          "selector": "0xcc15973f"
+        },
+        {
+          "signature": "wrapWasVoteCorrect(bytes32)",
+          "selector": "0xfb7da38c"
+        },
+        {
+          "signature": "wrapGetTotalCorrectlyVotedTokens()",
+          "selector": "0xa3c5fe48"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Leveraged1xTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "echidna_signage()",
+          "selector": "0xc3cf41bc"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "storeReturn(int256, int256)",
+          "selector": "0x0b564796"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "TokenizedDerivativeCreator",
+      "functions": [
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        },
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "marginCurrencyWhitelist()",
+          "selector": "0x415b7251"
+        },
+        {
+          "signature": "returnCalculatorWhitelist()",
+          "selector": "0x966a67dd"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "createTokenizedDerivative(tuple)",
+          "selector": "0xf04104d0"
+        }
+      ],
+      "events": [
+        {
+          "signature": "CreatedTokenizedDerivative(address)",
+          "selector": "0xf662f8b1"
+        }
+      ]
+    },
+    {
+      "name": "ReturnCalculatorInterface",
+      "functions": [
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Voting",
+      "functions": [
+        {
+          "signature": "addAuthorizedSender(address)",
+          "selector": "0xfa7229ee"
+        },
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "getMessage(address, bytes32)",
+          "selector": "0x5a615c91"
+        },
+        {
+          "signature": "getPublicKey(address, bytes32)",
+          "selector": "0xef397177"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "isAuthorizedSender(address, address)",
+          "selector": "0x0ba03f68"
+        },
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "removeAuthorizedSender(address)",
+          "selector": "0xcbd57967"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "removeMessage(address, bytes32)",
+          "selector": "0x55f7df1e"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "sendMessage(address, bytes32, bytes)",
+          "selector": "0xb057e5f3"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "setPublicKey(bytes, bytes32)",
+          "selector": "0xbec3b3cf"
+        },
+        {
+          "signature": "requestPrice(bytes32, uint256)",
+          "selector": "0xceb59e9d"
+        },
+        {
+          "signature": "batchCommit(tuple[])",
+          "selector": "0x4020485a"
+        },
+        {
+          "signature": "batchReveal(tuple[])",
+          "selector": "0x8b3e1dc9"
+        },
+        {
+          "signature": "addSupportedIdentifier(bytes32)",
+          "selector": "0x10a7e201"
+        },
+        {
+          "signature": "isIdentifierSupported(bytes32)",
+          "selector": "0x90978d1b"
+        },
+        {
+          "signature": "hasPrice(bytes32, uint256)",
+          "selector": "0xb3afb480"
+        },
+        {
+          "signature": "getPrice(bytes32, uint256)",
+          "selector": "0x182a7daf"
+        },
+        {
+          "signature": "getPendingRequests()",
+          "selector": "0x80a1f712"
+        },
+        {
+          "signature": "getVotePhase()",
+          "selector": "0x74dd278c"
+        },
+        {
+          "signature": "getCurrentRoundId()",
+          "selector": "0x5727e25d"
+        },
+        {
+          "signature": "hasRevealedVote(bytes32, uint256)",
+          "selector": "0x57e299b1"
+        },
+        {
+          "signature": "commitVote(bytes32, uint256, bytes32)",
+          "selector": "0xc21f3d25"
+        },
+        {
+          "signature": "revealVote(bytes32, uint256, int256, int256)",
+          "selector": "0x9bcd928a"
+        },
+        {
+          "signature": "commitAndPersistEncryptedVote(bytes32, uint256, bytes32, bytes)",
+          "selector": "0x836efb6f"
+        },
+        {
+          "signature": "setInflationRate(tuple)",
+          "selector": "0x2ee4f768"
+        },
+        {
+          "signature": "retrieveRewards(uint256, tuple[])",
+          "selector": "0xec3d4f3d"
+        }
+      ],
+      "events": [
+        {
+          "signature": "PriceRequestAdded(uint256, bytes32, uint256)",
+          "selector": "0x4917ddde"
+        },
+        {
+          "signature": "PriceResolved(uint256, bytes32, uint256, int256)",
+          "selector": "0xc22f66b4"
+        },
+        {
+          "signature": "RewardsRetrieved(address, uint256, uint256)",
+          "selector": "0xebf267bf"
+        },
+        {
+          "signature": "SupportedIdentifierAdded(bytes32)",
+          "selector": "0xa0ca1076"
+        },
+        {
+          "signature": "VoteCommitted(address, uint256, bytes32, uint256)",
+          "selector": "0xa78aeb87"
+        },
+        {
+          "signature": "VoteRevealed(address, uint256, bytes32, uint256, int256, uint256)",
+          "selector": "0xbda8c885"
+        }
+      ]
+    },
+    {
+      "name": "MultiRole",
+      "functions": [
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Ownable",
+      "functions": [
+        {
+          "signature": "owner()",
+          "selector": "0x8da5cb5b"
+        },
+        {
+          "signature": "isOwner()",
+          "selector": "0x8f32d59b"
+        },
+        {
+          "signature": "renounceOwnership()",
+          "selector": "0x715018a6"
+        },
+        {
+          "signature": "transferOwnership(address)",
+          "selector": "0xf2fde38b"
+        }
+      ],
+      "events": [
+        {
+          "signature": "OwnershipTransferred(address, address)",
+          "selector": "0x9ea5ea53"
+        }
+      ]
+    },
+    {
+      "name": "AdministrateeInterface",
+      "functions": [
+        {
+          "signature": "emergencyShutdown()",
+          "selector": "0x3403c2fc"
+        },
+        {
+          "signature": "remargin()",
+          "selector": "0xbda02e77"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "WithdrawableTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "pay()",
+          "selector": "0x1b9265b8"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "RegistryInterface",
+      "functions": [
+        {
+          "signature": "registerDerivative(address[], address)",
+          "selector": "0x8ab817d3"
+        },
+        {
+          "signature": "isDerivativeRegistered(address)",
+          "selector": "0x8a3ca36b"
+        },
+        {
+          "signature": "getRegisteredDerivatives(address)",
+          "selector": "0x35a027a0"
+        },
+        {
+          "signature": "getAllRegisteredDerivatives()",
+          "selector": "0x647fcf18"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "MockAdministratee",
+      "functions": [
+        {
+          "signature": "timesEmergencyShutdown()",
+          "selector": "0x5d21f153"
+        },
+        {
+          "signature": "timesRemargined()",
+          "selector": "0xbea002bc"
+        },
+        {
+          "signature": "remargin()",
+          "selector": "0xbda02e77"
+        },
+        {
+          "signature": "emergencyShutdown()",
+          "selector": "0x3403c2fc"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "MultiRoleTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "createSharedRole(uint256, uint256, address[])",
+          "selector": "0x75f00f02"
+        },
+        {
+          "signature": "createExclusiveRole(uint256, uint256, address)",
+          "selector": "0x66c86edd"
+        },
+        {
+          "signature": "revertIfNotHoldingRole(uint256)",
+          "selector": "0x52b34d49"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "ResultComputation",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "ERC20",
+      "functions": [
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "increaseAllowance(address, uint256)",
+          "selector": "0x0553e395"
+        },
+        {
+          "signature": "decreaseAllowance(address, uint256)",
+          "selector": "0x26444acc"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "VotingToken",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "balanceOfAt(address, uint256)",
+          "selector": "0x86d6753c"
+        },
+        {
+          "signature": "decimals()",
+          "selector": "0x313ce567"
+        },
+        {
+          "signature": "decreaseAllowance(address, uint256)",
+          "selector": "0x26444acc"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "increaseAllowance(address, uint256)",
+          "selector": "0x0553e395"
+        },
+        {
+          "signature": "name()",
+          "selector": "0x06fdde03"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "snapshot()",
+          "selector": "0x9711715a"
+        },
+        {
+          "signature": "symbol()",
+          "selector": "0x95d89b41"
+        },
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "totalSupplyAt(uint256)",
+          "selector": "0x981b24d0"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "mint(address, uint256)",
+          "selector": "0x36e59c31"
+        },
+        {
+          "signature": "burn(uint256)",
+          "selector": "0x42966c68"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Snapshot(uint256)",
+          "selector": "0x8030e83b"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "TokenizedDerivativeParams",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "TDS",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "VoteTimingTest",
+      "functions": [
+        {
+          "signature": "voteTiming()",
+          "selector": "0x71b7db53"
+        },
+        {
+          "signature": "wrapUpdateRoundId(uint256)",
+          "selector": "0x9e4d8447"
+        },
+        {
+          "signature": "wrapGetLastUpdatedRoundId()",
+          "selector": "0x504bac5d"
+        },
+        {
+          "signature": "wrapShouldUpdateRoundId(uint256)",
+          "selector": "0x5272ab7b"
+        },
+        {
+          "signature": "wrapComputeCurrentRoundId(uint256)",
+          "selector": "0x29e4b013"
+        },
+        {
+          "signature": "wrapComputeCurrentPhase(uint256)",
+          "selector": "0xd9336ea4"
+        },
+        {
+          "signature": "wrapComputeEstimatedRoundEndTime(uint256)",
+          "selector": "0x0f24c080"
+        },
+        {
+          "signature": "wrapInit(uint256)",
+          "selector": "0x44d8ce9a"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Arrays",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "SafeMath",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "FixedPointTest",
+      "functions": [
+        {
+          "signature": "wrapFromUnscaledUint(uint256)",
+          "selector": "0x6361b81b"
+        },
+        {
+          "signature": "wrapIsGreaterThan(uint256, uint256)",
+          "selector": "0xc4ca9ef1"
+        },
+        {
+          "signature": "wrapMixedIsGreaterThan(uint256, uint256)",
+          "selector": "0x8d0c8df3"
+        },
+        {
+          "signature": "wrapMixedIsGreaterThanOpposite(uint256, uint256)",
+          "selector": "0xf22f48b6"
+        },
+        {
+          "signature": "wrapIsLessThan(uint256, uint256)",
+          "selector": "0xfa83251e"
+        },
+        {
+          "signature": "wrapMixedIsLessThan(uint256, uint256)",
+          "selector": "0x964dccee"
+        },
+        {
+          "signature": "wrapMixedIsLessThanOpposite(uint256, uint256)",
+          "selector": "0xf1179f7c"
+        },
+        {
+          "signature": "wrapAdd(uint256, uint256)",
+          "selector": "0xdd851fac"
+        },
+        {
+          "signature": "wrapMixedAdd(uint256, uint256)",
+          "selector": "0x70de0d7f"
+        },
+        {
+          "signature": "wrapSub(uint256, uint256)",
+          "selector": "0xc20e409b"
+        },
+        {
+          "signature": "wrapMixedSub(uint256, uint256)",
+          "selector": "0x1b5087f7"
+        },
+        {
+          "signature": "wrapMixedSubOpposite(uint256, uint256)",
+          "selector": "0xb7e20c5b"
+        },
+        {
+          "signature": "wrapMul(uint256, uint256)",
+          "selector": "0x791b71e0"
+        },
+        {
+          "signature": "wrapMixedMul(uint256, uint256)",
+          "selector": "0xffab7465"
+        },
+        {
+          "signature": "wrapDiv(uint256, uint256)",
+          "selector": "0xd4387c9b"
+        },
+        {
+          "signature": "wrapMixedDiv(uint256, uint256)",
+          "selector": "0xd556132c"
+        },
+        {
+          "signature": "wrapMixedDivOpposite(uint256, uint256)",
+          "selector": "0xf7bc5d96"
+        },
+        {
+          "signature": "wrapPow(uint256, uint256)",
+          "selector": "0x1f72353c"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Math",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "LeveragedShort3xTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "echidna_signage()",
+          "selector": "0xc3cf41bc"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "storeReturn(int256, int256)",
+          "selector": "0x0b564796"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "VotingInterface",
+      "functions": [
+        {
+          "signature": "commitVote(bytes32, uint256, bytes32)",
+          "selector": "0xc21f3d25"
+        },
+        {
+          "signature": "revealVote(bytes32, uint256, int256, int256)",
+          "selector": "0x9bcd928a"
+        },
+        {
+          "signature": "getPendingRequests()",
+          "selector": "0x80a1f712"
+        },
+        {
+          "signature": "getVotePhase()",
+          "selector": "0x74dd278c"
+        },
+        {
+          "signature": "getCurrentRoundId()",
+          "selector": "0x5727e25d"
+        },
+        {
+          "signature": "retrieveRewards(uint256, tuple[])",
+          "selector": "0xec3d4f3d"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Testable",
+      "functions": [
+        {
+          "signature": "isTest()",
+          "selector": "0x9381a345"
+        },
+        {
+          "signature": "setCurrentTime(uint256)",
+          "selector": "0x22f8e566"
+        },
+        {
+          "signature": "getCurrentTime()",
+          "selector": "0x29cb924d"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "FinancialContractsAdmin",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "callEmergencyShutdown(address)",
+          "selector": "0x0caf4121"
+        },
+        {
+          "signature": "callRemargin(address)",
+          "selector": "0x547e1c40"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "VoteTiming",
+      "functions": [],
+      "events": []
+    },
+    {
+      "name": "AddressWhitelist",
+      "functions": [
+        {
+          "signature": "isOwner()",
+          "selector": "0x8f32d59b"
+        },
+        {
+          "signature": "owner()",
+          "selector": "0x8da5cb5b"
+        },
+        {
+          "signature": "renounceOwnership()",
+          "selector": "0x715018a6"
+        },
+        {
+          "signature": "transferOwnership(address)",
+          "selector": "0xf2fde38b"
+        },
+        {
+          "signature": "addToWhitelist(address)",
+          "selector": "0xe43252d7"
+        },
+        {
+          "signature": "removeFromWhitelist(address)",
+          "selector": "0x8ab1d681"
+        },
+        {
+          "signature": "isOnWhitelist(address)",
+          "selector": "0x3a3ab672"
+        },
+        {
+          "signature": "getWhitelist()",
+          "selector": "0xd01f63f5"
+        }
+      ],
+      "events": [
+        {
+          "signature": "AddedToWhitelist(address)",
+          "selector": "0xa850ae91"
+        },
+        {
+          "signature": "OwnershipTransferred(address, address)",
+          "selector": "0x9ea5ea53"
+        },
+        {
+          "signature": "RemovedFromWhitelist(address)",
+          "selector": "0xcdd2e9b9"
+        }
+      ]
+    },
+    {
+      "name": "TokenizedDerivativeUtils",
+      "functions": [],
+      "events": [
+        {
+          "signature": "Default(string, uint256, int256)",
+          "selector": "0x20ecdc9a"
+        },
+        {
+          "signature": "Deposited(string, uint256)",
+          "selector": "0xf5e6a48b"
+        },
+        {
+          "signature": "Disputed(string, uint256, int256)",
+          "selector": "0x26b90afd"
+        },
+        {
+          "signature": "EmergencyShutdownTransition(string, uint256)",
+          "selector": "0x3044ba0f"
+        },
+        {
+          "signature": "Expired(string, uint256)",
+          "selector": "0x654ded00"
+        },
+        {
+          "signature": "NavUpdated(string, int256, int256)",
+          "selector": "0xabd9dbe3"
+        },
+        {
+          "signature": "Settled(string, uint256, int256)",
+          "selector": "0x360fac43"
+        },
+        {
+          "signature": "TokensCreated(string, uint256)",
+          "selector": "0xfd047958"
+        },
+        {
+          "signature": "TokensRedeemed(string, uint256)",
+          "selector": "0x42e7d4f4"
+        },
+        {
+          "signature": "Withdrawal(string, uint256)",
+          "selector": "0x5b830aae"
+        }
+      ]
+    },
+    {
+      "name": "ERC20Snapshot",
+      "functions": [
+        {
+          "signature": "allowance(address, address)",
+          "selector": "0x69bfed33"
+        },
+        {
+          "signature": "approve(address, uint256)",
+          "selector": "0x8b069f2a"
+        },
+        {
+          "signature": "balanceOf(address)",
+          "selector": "0x70a08231"
+        },
+        {
+          "signature": "decreaseAllowance(address, uint256)",
+          "selector": "0x26444acc"
+        },
+        {
+          "signature": "increaseAllowance(address, uint256)",
+          "selector": "0x0553e395"
+        },
+        {
+          "signature": "totalSupply()",
+          "selector": "0x18160ddd"
+        },
+        {
+          "signature": "transfer(address, uint256)",
+          "selector": "0x9d61d234"
+        },
+        {
+          "signature": "transferFrom(address, address, uint256)",
+          "selector": "0xb642fe57"
+        },
+        {
+          "signature": "snapshot()",
+          "selector": "0x9711715a"
+        },
+        {
+          "signature": "balanceOfAt(address, uint256)",
+          "selector": "0x86d6753c"
+        },
+        {
+          "signature": "totalSupplyAt(uint256)",
+          "selector": "0x981b24d0"
+        }
+      ],
+      "events": [
+        {
+          "signature": "Approval(address, address, uint256)",
+          "selector": "0x76862f15"
+        },
+        {
+          "signature": "Snapshot(uint256)",
+          "selector": "0x8030e83b"
+        },
+        {
+          "signature": "Transfer(address, address, uint256)",
+          "selector": "0xe73f11a8"
+        }
+      ]
+    },
+    {
+      "name": "LeveragedReturnCalculator",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "LeveragedReturnCalculatorTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        },
+        {
+          "signature": "storeReturn(int256, int256)",
+          "selector": "0x0b564796"
+        },
+        {
+          "signature": "echidna_signage()",
+          "selector": "0xc3cf41bc"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Leveraged4xTest",
+      "functions": [
+        {
+          "signature": "addMember(uint256, address)",
+          "selector": "0x75e6d1ba"
+        },
+        {
+          "signature": "computeReturn(int256, int256)",
+          "selector": "0xd1687f78"
+        },
+        {
+          "signature": "echidna_signage()",
+          "selector": "0xc3cf41bc"
+        },
+        {
+          "signature": "getMember(uint256)",
+          "selector": "0xab3545e5"
+        },
+        {
+          "signature": "holdsRole(uint256, address)",
+          "selector": "0x14b37cb3"
+        },
+        {
+          "signature": "leverage()",
+          "selector": "0x2c86d98e"
+        },
+        {
+          "signature": "removeMember(uint256, address)",
+          "selector": "0x9fdb8700"
+        },
+        {
+          "signature": "resetMember(uint256, address)",
+          "selector": "0x74884cb1"
+        },
+        {
+          "signature": "storeReturn(int256, int256)",
+          "selector": "0x0b564796"
+        },
+        {
+          "signature": "withdraw(uint256)",
+          "selector": "0x2e1a7d4d"
+        },
+        {
+          "signature": "withdrawErc20(address, uint256)",
+          "selector": "0xb99d1825"
+        }
+      ],
+      "events": []
+    },
+    {
+      "name": "Exclusive",
+      "functions": [],
+      "events": []
+    }
+  ]
+}
