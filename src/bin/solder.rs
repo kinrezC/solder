@@ -15,7 +15,5 @@ fn main() {
     let args = Cli::from_args();
     let path = args.path;
 
-    let (function_types, event_types) = solder::process_signatures_and_selectors(path);
-
-    println!("{:?} and {:?}", function_types, event_types);
+    solder::process_functions_and_events(path);
 }

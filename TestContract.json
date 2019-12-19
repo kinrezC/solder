@@ -15,6 +15,12 @@
           "internalType": "uint256",
           "name": "a",
           "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
         }
       ],
       "name": "E",
@@ -46,21 +52,14 @@
   "ast": {
     "absolutePath": "/home/mattczernik/Workspace/terminal-projects/truffle-test/contracts/TestContract.sol",
     "exportedSymbols": {
-      "TestContract": [
-        91
-      ]
+      "TestContract": [91]
     },
     "id": 92,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 58,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".11"
-        ],
+        "literals": ["solidity", "^", "0.5", ".11"],
         "nodeType": "PragmaDirective",
         "src": "0:24:1"
       },
@@ -71,9 +70,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 91,
-        "linearizedBaseContracts": [
-          91
-        ],
+        "linearizedBaseContracts": [91],
         "name": "TestContract",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -287,10 +284,7 @@
                       "id": 74,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        109,
-                        110
-                      ],
+                      "overloadedDeclarations": [109, 110],
                       "referencedDeclaration": 110,
                       "src": "163:7:1",
                       "typeDescriptions": {
@@ -480,21 +474,14 @@
   "legacyAST": {
     "absolutePath": "/home/mattczernik/Workspace/terminal-projects/truffle-test/contracts/TestContract.sol",
     "exportedSymbols": {
-      "TestContract": [
-        91
-      ]
+      "TestContract": [91]
     },
     "id": 92,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 58,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".11"
-        ],
+        "literals": ["solidity", "^", "0.5", ".11"],
         "nodeType": "PragmaDirective",
         "src": "0:24:1"
       },
@@ -505,9 +492,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 91,
-        "linearizedBaseContracts": [
-          91
-        ],
+        "linearizedBaseContracts": [91],
         "name": "TestContract",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -721,10 +706,7 @@
                       "id": 74,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        109,
-                        110
-                      ],
+                      "overloadedDeclarations": [109, 110],
                       "referencedDeclaration": 110,
                       "src": "163:7:1",
                       "typeDescriptions": {
@@ -925,3 +907,4 @@
     "methods": {}
   }
 }
+
