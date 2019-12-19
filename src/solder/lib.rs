@@ -1,15 +1,11 @@
-extern crate ethereum_types;
 extern crate hex;
-extern crate keccak_hash;
-extern crate regex;
 extern crate serde;
-extern crate structopt;
+extern crate serde_json;
 
 use ethereum_types::H256;
 use keccak_hash::keccak;
 use regex::Regex;
 use serde_derive::{Deserialize, Serialize};
-use serde_json;
 use std::fs::{read_to_string, File};
 use std::path::PathBuf;
 
@@ -19,8 +15,15 @@ pub struct Contract {
     abi: Vec<AbiType>,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ContractWithData {
+    contract_name: String,
+    functions: Vec<AbiType>,
+    events: Vec<AbiType>,
+}
+
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct AbiType {
+struct AbiType {
     r#type: String,
     #[serde(default = "default_name")]
     name: String,
@@ -29,15 +32,20 @@ pub struct AbiType {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 struct InputType {
-    internalType: String,
     name: String,
     r#type: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct SelectorMatchContainer {
+struct ContractMatchContainer {
+    contract_matches: Vec<ContractMatch>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+struct ContractMatch {
     name: String,
-    selector_match: Vec<SelectorMatch>,
+    functions: Vec<SelectorMatch>,
+    events: Vec<SelectorMatch>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -53,21 +61,36 @@ fn default_name() -> String {
 pub fn process_functions_and_events(path: PathBuf) {
     let file_paths = get_valid_files_in_path(path);
     let abi_types = deserialize_json_interface(file_paths);
-    let (function_types, event_types) = separate_functions_and_events(abi_types);
-    let functions_name = "functions".to_string();
-    let events_name = "events".to_string();
-    let functions_match = parse_signatures_and_selectors(function_types, functions_name);
-    let events_match = parse_signatures_and_selectors(event_types, events_name);
-
-    let functions_file = File::create("function-signatures.json").unwrap();
-    let events_file = File::create("event-signatures.json").unwrap();
-
-    serde_json::to_writer_pretty(functions_file, &functions_match).unwrap();
-    serde_json::to_writer_pretty(events_file, &events_match).unwrap();
+    let contracts_with_data = separate_functions_and_events(abi_types);
+    let contract_match_container = process_signatures_and_selectors(contracts_with_data);
+    let contract_matches_file = File::create("contract-selectors.json").unwrap();
+    serde_json::to_writer_pretty(contract_matches_file, &contract_match_container).unwrap();
 }
 
-fn parse_signatures_and_selectors(vec: Vec<AbiType>, type_name: String) -> SelectorMatchContainer {
-    let mut signatures_and_selectors: Vec<SelectorMatch> = Vec::new();
+fn process_signatures_and_selectors(
+    contracts_with_data: Vec<ContractWithData>,
+) -> ContractMatchContainer {
+    let mut contract_matches: Vec<ContractMatch> = Vec::new();
+
+    for contract in contracts_with_data {
+        let function_selector_matches = parse_signatures_and_selectors(contract.functions);
+        let event_selector_matches = parse_signatures_and_selectors(contract.events);
+
+        let contract_match = ContractMatch {
+            name: contract.contract_name,
+            functions: function_selector_matches,
+            events: event_selector_matches,
+        };
+        contract_matches.push(contract_match)
+    }
+    let contract_match_container = ContractMatchContainer {
+        contract_matches: contract_matches,
+    };
+    contract_match_container
+}
+
+fn parse_signatures_and_selectors(vec: Vec<AbiType>) -> Vec<SelectorMatch> {
+    let mut selector_matches: Vec<SelectorMatch> = Vec::new();
     for item in vec {
         let mut signature = (item.name + "(").to_string();
         if item.inputs.len() > 0 {
@@ -86,20 +109,16 @@ fn parse_signatures_and_selectors(vec: Vec<AbiType>, type_name: String) -> Selec
             signature: signature,
             selector: selector,
         };
-
-        signatures_and_selectors.push(selector_match);
+        selector_matches.push(selector_match);
     }
-
-    SelectorMatchContainer {
-        name: type_name,
-        selector_match: signatures_and_selectors,
-    }
+    selector_matches
 }
 
-fn separate_functions_and_events(contracts: Vec<Contract>) -> (Vec<AbiType>, Vec<AbiType>) {
-    let mut function_types: Vec<AbiType> = Vec::new();
-    let mut event_types: Vec<AbiType> = Vec::new();
+fn separate_functions_and_events(contracts: Vec<Contract>) -> Vec<ContractWithData> {
+    let mut contracts_with_data: Vec<ContractWithData> = Vec::new();
     for iface in contracts {
+        let mut function_types: Vec<AbiType> = Vec::new();
+        let mut event_types: Vec<AbiType> = Vec::new();
         for abi_type in iface.abi {
             match abi_type.r#type.as_ref() {
                 "function" => function_types.push(abi_type.clone()),
@@ -107,8 +126,14 @@ fn separate_functions_and_events(contracts: Vec<Contract>) -> (Vec<AbiType>, Vec
                 _ => (),
             }
         }
+        let contract_with_data = ContractWithData {
+            contract_name: iface.contractName,
+            functions: function_types,
+            events: event_types,
+        };
+        contracts_with_data.push(contract_with_data);
     }
-    (function_types, event_types)
+    contracts_with_data
 }
 
 fn deserialize_json_interface(file_paths: Vec<PathBuf>) -> Vec<Contract> {
