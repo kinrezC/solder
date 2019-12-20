@@ -2,6 +2,7 @@ extern crate solder;
 extern crate structopt;
 
 use std::path::PathBuf;
+use std::time::SystemTime;
 use structopt::StructOpt;
 
 #[derive(StructOpt)]
@@ -12,6 +13,7 @@ struct Cli {
 }
 
 fn main() {
+    let time = SystemTime::now();
     let args = Cli::from_args();
     let pattern = args.pattern;
     let path = args.path;
@@ -20,4 +22,5 @@ fn main() {
         "test" => solder::process_functions_and_events(path),
         _ => println!("Undefined command: {}", pattern),
     }
+    println!("{:?}", time.elapsed())
 }

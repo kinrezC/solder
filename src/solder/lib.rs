@@ -92,15 +92,15 @@ fn process_signatures_and_selectors(
 fn parse_signatures_and_selectors(vec: Vec<AbiType>) -> Vec<SelectorMatch> {
     let mut selector_matches: Vec<SelectorMatch> = Vec::new();
     for item in vec {
-        let mut signature = (item.name + "(").to_string();
+        let mut signature = item.name + "(";
         if item.inputs.len() > 0 {
             for input in item.inputs {
-                signature = (signature + &input.r#type.clone() + ", ").to_string();
+                signature = signature + &input.r#type.clone() + ", ";
             }
             signature.truncate(signature.len() - 2);
-            signature = (signature + ")").to_string();
+            signature = signature + ")"
         } else {
-            signature = (signature + ")").to_string();
+            signature = signature + ")";
         }
         let bytes = signature.as_bytes();
         let hash: H256 = keccak(bytes);
